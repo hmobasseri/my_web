@@ -1,4 +1,4 @@
-header footer
+header , footer
 {
     border:10px;
     background-color: grey;
@@ -6,4 +6,16 @@ header footer
    
     padding: 2px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 2px;
+}
+
+table , td , tr
+{
+ border: solid;   
+ border-color: indigo;
+}
+
+img 
+{
+    height: 300px;
 }
