@@ -1,21 +1,160 @@
-header , footer
-{
-    border:10px;
-    background-color: grey;
-    height: 50px;
-   
-    padding: 2px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 2px;
-}
 
-table , td , tr
-{
- border: solid;   
- border-color: indigo;
-}
+        body{
+            margin:0;
+                     
+            font-family: tahoma;
+        }
+        .page{
+            min-height: 100vh;
+            display: flex;
+        }
+        .page-container{
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: auto;
+        }
 
-img 
-{
-    height: 300px;
-}
+        .profile{
+            box-sizing: border-box;
+            max-width: 380px;
+            padding-top: 40px;
+            font-family: tahoma;
+            font-size: 14px;
+            font-weight: 400;
+            color: #8bc34a;
+            background-color: white;
+            text-align: center;
+            position: relative;
+            z-index: 0;
+            overflow: hidden;            
+
+
+        }
+
+        .profile:before{
+            content: "" ;
+            width: 85px;
+            height: 50px ;
+            transition: transform 0.5s cubic-bezier(0.42,.04,.13,.92);
+            border-radius: 50%;
+            background-color: #8bc34a;
+            position: absolute;
+            top:-70%;
+            left: 50%;
+            z-index:-1;
+            transform: translateX(-50%);
+            
+        }
+        .profile:hover:before {
+            transition: transform 0.7s cubic-bezier(0.77,0.9,0,1.31);
+            transform: translateX(-50%) translateY(200%) scale(25)
+    
+
+        }
+
+        .profile:hover, 
+        .profile:hover .profile-value,
+        .profile:hover .progile-social{
+            color:white;
+        }
+
+        .profile:hover .profile-group ,
+        .profile:hover .profile-avatar{
+            border-color: white;
+        }
+
+        .profile:hover .profile-stats{
+            background-color: #bbc34a;
+        }
+        .profile-header{
+            transition:color 0.4s ease-out 0.1s;
+
+        }
+
+           .profile-avatar{
+               border-radius: 50%;
+               width: 120px;
+               height: 120px;
+               border: 5px solid #8bc34a;
+               transition: border-color 0.4s ease-out 0.1s;
+           }
+
+           .profile:hover .profile-avatar{
+               transition-delay: 0.2s;
+           }
+           .profile-name{
+               margin-top: 10px;
+               margin-bottom: 0;
+               font-size: 30px;
+
+           }
+           .profile-stats{
+               display: flex;
+               justify-content:flex-start ;
+               flex-wrap: wrap;
+               margin-top: 25px;
+               margin-bottom: 25px;
+               background-color: #f0f0f0;
+               padding-top: 25px;
+               padding-bottom: 25px;
+               transition: background-color 0.4s ease-out0.1s;
+           }
+           .profile:hover .profile-stats{
+               transition-delay: 0.2s;
+           }
+            .profile-group{
+                box-sizing: border-box;
+                width: 33.3333%;
+                transition:border-color 0.4s ease-out0.1s;
+                border-right: 1px solid #bdbdbd;
+                padding-right: 2%;
+                padding-left: 2%;
+            }
+             .profile:hover .profile-group{
+                 transition-delay: 0.4s;
+             }
+             .profile-group:nth-child(n+4){
+                 margin-top: 20px;
+                 
+             }
+             .profile-group:nth-child(3n+3){
+                 border-right: none;
+                 
+             }
+             .profile-param .profile-value{
+                 display:block;
+                 transition: color 0.4s ease-out 0.1s;
+             }
+
+             .profile-param{
+                 text-transform: uppercase;
+             }
+
+             .profile-value{
+                 font-size:30px;
+                 color:#8bc34a;
+                 font-weight: 700;
+             }
+
+             .profile-socials{
+                 padding-bottom: 25px;
+                 display: flex;
+                 justify-content: center;
+                 align-content: center;
+                 font-size: 17px;
+             }
+             .profile-social{
+                 border:4px solid #8bc34a;
+                 color:#8bc34a;
+                 border-radius: 50%;
+                 transition: color 0.4 ease-out 0.3s;
+                 width: 18px;
+                 height: 18px;
+                 padding:15px;
+                 position: relative;
+                 margin-right: 10px;
+             }
+
+
+
+    
